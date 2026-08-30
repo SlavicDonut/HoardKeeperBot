@@ -26,7 +26,7 @@ public class JDAConfig {
 
         JDABuilder builder = JDABuilder.createDefault(botToken);
 
-        for  (ListenerAdapter listener : listeners) {
+        for (ListenerAdapter listener : listeners) {
             System.out.println("=== [DEBUG] Rejestruję listener: " + listener.getClass().getSimpleName());
             builder.addEventListeners(listener);
         }
