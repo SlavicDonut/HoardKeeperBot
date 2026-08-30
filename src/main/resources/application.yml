@@ -22,4 +22,4 @@ spring:
 
 discord:
   bot:
-    token: ${DISCORD_BOT_TOKEN:your-default-token-here}
+    token: ${DISCORD_BOT_TOKEN:}
