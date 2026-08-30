@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface InventoryItemRepository extends JpaRepository<InventoryItem, Long> {
 
-    List<InventoryItem> findByUserId(String userId);
-
+    List<InventoryItem> findAllByUserId(String userId);
     Optional<InventoryItem> findByUserIdAndItemNameIgnoreCase(String userId, String itemName);
+
 }
