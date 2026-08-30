@@ -11,11 +11,11 @@ import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RollCommandListener extends ListenerAdapter implements SlashCommand {
+public class RollCommand extends ListenerAdapter implements SlashCommand {
 
     private final DiceService diceService;
 
-    public RollCommandListener(DiceService diceService) {
+    public RollCommand(DiceService diceService) {
         this.diceService = diceService;
     }
 
@@ -26,12 +26,7 @@ public class RollCommandListener extends ListenerAdapter implements SlashCommand
     }
 
     @Override
-    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-
-        if (!event.getName().equals("roll")) {
-            return;
-        }
-
+    public void execute(SlashCommandInteractionEvent event) {
         OptionMapping option = event.getOption("expression");
         if (option == null) {
             event.reply("Musisz wpisać rzut w postaci np. '2d6+3'!").setEphemeral(true).queue();

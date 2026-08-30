@@ -7,7 +7,7 @@ import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PingCommandListener extends ListenerAdapter implements SlashCommand {
+public class PingCommand implements SlashCommand {
 
     @Override
     public CommandData getCommandData() {
@@ -15,12 +15,11 @@ public class PingCommandListener extends ListenerAdapter implements SlashCommand
     }
 
     @Override
-    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
+    public void execute(SlashCommandInteractionEvent event) {
         long gatewayPing;
         if (!event.getName().equals("ping")) {return;}
 
         gatewayPing = event.getJDA().getGatewayPing();
         event.reply("Pong! (%dms)".formatted(gatewayPing)).queue();
-
     }
 }
