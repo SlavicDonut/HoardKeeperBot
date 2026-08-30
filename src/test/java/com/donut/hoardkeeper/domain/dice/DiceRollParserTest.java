@@ -1,5 +1,9 @@
-package com.donut.hoardkeeper.dice;
+package com.donut.hoardkeeper.domain.dice;
 
+import com.donut.hoardkeeper.domain.dice.DiceComponent;
+import com.donut.hoardkeeper.domain.dice.DiceRollInput;
+import com.donut.hoardkeeper.domain.dice.DiceRollParser;
+import com.donut.hoardkeeper.domain.dice.RollMode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -3,9 +3,9 @@ spring:
     name: hoard-keeper
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/hoard_keeper_db
-    username: hoard_user
-    password: hoard_password
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -22,4 +22,4 @@ spring:
 
 discord:
   bot:
-    token: ${DISCORD_BOT_TOKEN:}
+    token: ${DISCORD_BOT_TOKEN}

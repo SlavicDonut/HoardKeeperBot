@@ -1,4 +1,4 @@
-package com.donut.hoardkeeper.dice;
+package com.donut.hoardkeeper.domain.dice;
 
 import org.springframework.stereotype.Service;
 
