@@ -1,4 +1,4 @@
-package com.donut.hoardkeeper.dice;
+package com.donut.hoardkeeper.domain.dice;
 
 public sealed interface DiceComponent {
     record DiceGroup(int diceCount, int dieSides, RollMode mode) implements DiceComponent {}

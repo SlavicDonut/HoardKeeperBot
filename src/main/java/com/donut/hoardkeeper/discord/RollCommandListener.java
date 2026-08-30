@@ -1,7 +1,7 @@
 package com.donut.hoardkeeper.discord;
 
-import com.donut.hoardkeeper.dice.DiceRoll;
-import com.donut.hoardkeeper.dice.DiceService;
+import com.donut.hoardkeeper.domain.dice.DiceRoll;
+import com.donut.hoardkeeper.domain.dice.DiceService;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.OptionMapping;
